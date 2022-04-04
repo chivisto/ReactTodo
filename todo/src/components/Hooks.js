@@ -34,11 +34,10 @@ function Hooks() {
 
     const completeItem = (id) => {
         const specificItem = list.find((item) => item.id === id);
-        for(let i = 0; i < list.length; i++){
-            console.log(specificItem.title)
-        }
         if(setComplete != true){
-           // console.log(specificItem)
+            console.log(specificItem.title)
+            specificItem.title.style.textDecoration = "line-through";
+            setComplete(true)
         }
     }
   
@@ -60,7 +59,7 @@ function Hooks() {
     useEffect(() => {
       localStorage.setItem("list", JSON.stringify(list));
     }, [list]);
-  
+
     return (
       <section className="section-center">
         <form className="todo-form" onSubmit={handleSubmit}>
