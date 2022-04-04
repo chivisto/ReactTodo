@@ -34,10 +34,11 @@ function Hooks() {
 
     const completeItem = (id) => {
         const specificItem = list.find((item) => item.id === id);
-
+        for(let i = 0; i < list.length; i++){
+            console.log(specificItem.title)
+        }
         if(setComplete != true){
-            specificItem.style.textDecoration = "line-through";
-            setComplete(false)
+           // console.log(specificItem)
         }
     }
   
@@ -55,6 +56,7 @@ function Hooks() {
       setEditID(id);
       setName(specificItem.title);
     };
+
     useEffect(() => {
       localStorage.setItem("list", JSON.stringify(list));
     }, [list]);
