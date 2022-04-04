@@ -34,10 +34,10 @@ function Hooks() {
 
     const completeItem = (id) => {
         const specificItem = list.find((item) => item.id === id);
-        if(setComplete != true){
+        if(setComplete !== true){
             console.log(specificItem.title)
             specificItem.title.style.textDecoration = "line-through";
-            setComplete(true)
+            isComplete(true)
         }
     }
   
