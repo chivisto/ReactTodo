@@ -63,3 +63,8 @@ button{
 .delete-btn{
   margin-left: .3rem;
 }
+h3{
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-align: center;
+}
