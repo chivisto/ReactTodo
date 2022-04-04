@@ -47,3 +47,19 @@ button{
     transform: rotate(360deg);
   }
 }
+
+.btn-container{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+.clear-btn{
+  display: flex;
+  justify-content: center;
+}
+.edit-btn{
+  margin-left: .3rem;
+}
+.delete-btn{
+  margin-left: .3rem;
+}

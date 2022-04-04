@@ -1,13 +1,17 @@
 import React from "react";
-const List = ({ items, removeItem, editItem }) => {
+const List = ({ items, removeItem, editItem, completeItem }) => {
   return (
-    <div className="grocery-list">
+    <div className="todo-list">
       {items.map((item) => {
         const { id, title } = item;
         return (
-          <article className="grocery-item" key={id}>
-            <p className="title">{title}</p>
+          <article className="todo-item" key={id}>
+            
             <div className="btn-container">
+            <p className="title">{title}</p>
+            <button type="button" className="complete-btn" onClick={() => completeItem()}>
+              complete
+            </button>
               <button type="button" className="edit-btn" onClick={() => editItem(id)}>
                 edit
               </button>
